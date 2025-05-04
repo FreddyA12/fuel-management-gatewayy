@@ -1,0 +1,79 @@
+syntax = "proto3";
+
+option csharp_namespace = "VehicleService";
+
+package vehicle;
+
+service VehicleService {
+  rpc Register (RegisterVehicleRequest) returns (RegisterVehicleResponse);
+  rpc GetByPlate (GetVehicleRequest) returns (GetVehicleResponse);
+  rpc Update (UpdateVehicleRequest) returns (UpdateVehicleResponse);
+  rpc Delete (DeleteVehicleRequest) returns (DeleteVehicleResponse);
+  rpc ListAll (Empty) returns (ListAllVehiclesResponse);
+}
+
+message RegisterVehicleRequest {
+  string plateNumber = 1;
+  string machineryType = 2;
+  bool isOperational = 3;
+  double fuelCapacity = 4;
+  string registeredAt = 5;
+  double fuelConsumptionByKm = 6;
+  string model = 7;
+}
+
+message RegisterVehicleResponse {
+  string status = 1;
+}
+
+message GetVehicleRequest {
+  string plateNumber = 1;
+}
+
+message GetVehicleResponse {
+  string plateNumber = 1;
+  string machineryType = 2;
+  bool isOperational = 3;
+  double fuelCapacity = 4;
+  string registeredAt = 5;
+  double fuelConsumptionByKm = 6;
+  string model = 7;
+}
+
+message UpdateVehicleRequest {
+  string plateNumber = 1;
+  string machineryType = 2;
+  bool isOperational = 3;
+  double fuelCapacity = 4;
+  string registeredAt = 5;
+  double fuelConsumptionByKm = 6;
+  string model = 7;
+}
+
+message UpdateVehicleResponse {
+  string status = 1;
+}
+
+message DeleteVehicleRequest {
+  string plateNumber = 1;
+}
+
+message DeleteVehicleResponse {
+  string status = 1;
+}
+
+message VehicleItem {
+  string plateNumber = 1;
+  string machineryType = 2;
+  bool isOperational = 3;
+  double fuelCapacity = 4;
+  string registeredAt = 5;
+  double fuelConsumptionByKm = 6;
+  string model = 7;
+}
+
+message ListAllVehiclesResponse {
+  repeated VehicleItem vehicles = 1;
+}
+
+message Empty {}

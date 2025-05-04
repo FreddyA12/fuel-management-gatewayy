@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\fuel-management-gateway</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.Net.Client" Version="2.71.0" />
+	 <PackageReference Include="Google.Protobuf" Version="3.25.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	  <PackageReference Include="Grpc.Tools" Version="2.71.0">
+		  <PrivateAssets>All</PrivateAssets>
+	  </PackageReference>
+  </ItemGroup>
+
+	
+  <ItemGroup>
+    <ProjectReference Include="..\AuthService\AuthService.csproj" />
+    <ProjectReference Include="..\VehicleService\VehicleService.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Protobuf Include="Protos\auth.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\vehicle.proto" GrpcServices="Client" />
+	</ItemGroup>
+
+
+</Project>
