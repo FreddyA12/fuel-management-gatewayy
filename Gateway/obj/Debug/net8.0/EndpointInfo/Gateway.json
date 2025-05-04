@@ -66,6 +66,122 @@
           }
         }
       }
+    },
+    "/api/Vehicle/register": {
+      "post": {
+        "tags": [
+          "Vehicle"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterVehicleRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterVehicleRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterVehicleRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/{plateNumber}": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "plateNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Vehicle"
+        ],
+        "parameters": [
+          {
+            "name": "plateNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/update": {
+      "put": {
+        "tags": [
+          "Vehicle"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateVehicleRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vehicle/all": {
+      "get": {
+        "tags": [
+          "Vehicle"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -96,6 +212,72 @@
             "nullable": true
           },
           "role": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterVehicleRequest": {
+        "type": "object",
+        "properties": {
+          "plateNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "machineryType": {
+            "type": "string",
+            "nullable": true
+          },
+          "isOperational": {
+            "type": "boolean"
+          },
+          "fuelCapacity": {
+            "type": "number",
+            "format": "double"
+          },
+          "registeredAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "fuelConsumptionByKm": {
+            "type": "number",
+            "format": "double"
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateVehicleRequest": {
+        "type": "object",
+        "properties": {
+          "plateNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "machineryType": {
+            "type": "string",
+            "nullable": true
+          },
+          "isOperational": {
+            "type": "boolean"
+          },
+          "fuelCapacity": {
+            "type": "number",
+            "format": "double"
+          },
+          "registeredAt": {
+            "type": "string",
+            "nullable": true
+          },
+          "fuelConsumptionByKm": {
+            "type": "number",
+            "format": "double"
+          },
+          "model": {
             "type": "string",
             "nullable": true
           }

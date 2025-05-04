@@ -1377,23 +1377,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fredd\\.nuget\\packages\\": {},
+    "C:\\Users\\Melan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fredd\\OneDrive\\Escritorio\\6SWA\\Aplicaciones Distribuidas\\Proyecto-fuel\\AuthService\\AuthService.csproj",
+      "projectUniqueName": "C:\\Users\\Melan\\OneDrive\\Documents\\SOFTWARE\\Sexto Semestre\\Aplicaciones Distribuidas\\proyecto\\fuel-management-gatewayy\\AuthService\\AuthService.csproj",
       "projectName": "AuthService",
-      "projectPath": "C:\\Users\\fredd\\OneDrive\\Escritorio\\6SWA\\Aplicaciones Distribuidas\\Proyecto-fuel\\AuthService\\AuthService.csproj",
-      "packagesPath": "C:\\Users\\fredd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fredd\\OneDrive\\Escritorio\\6SWA\\Aplicaciones Distribuidas\\Proyecto-fuel\\AuthService\\obj\\",
+      "projectPath": "C:\\Users\\Melan\\OneDrive\\Documents\\SOFTWARE\\Sexto Semestre\\Aplicaciones Distribuidas\\proyecto\\fuel-management-gatewayy\\AuthService\\AuthService.csproj",
+      "packagesPath": "C:\\Users\\Melan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Melan\\OneDrive\\Documents\\SOFTWARE\\Sexto Semestre\\Aplicaciones Distribuidas\\proyecto\\fuel-management-gatewayy\\AuthService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\fredd\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Melan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1421,7 +1421,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -1476,7 +1476,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -15,10 +15,10 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(o =>
 });
 
 // Configurar cliente gRPC para VehicleService
-/*builder.Services.AddGrpcClient<VehicleService.VehicleServiceClient>(o =>
+builder.Services.AddGrpcClient<VehicleService.VehicleService.VehicleServiceClient>(o =>
 {
-   o.Address = new Uri("https://localhost:5183"); // Cambia al puerto de tu servicio Vehicle
-});*/
+   o.Address = new Uri("https://localhost:44392"); // Cambia al puerto de tu servicio Vehicle
+});
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();

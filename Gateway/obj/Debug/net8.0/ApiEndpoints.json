@@ -30,5 +30,79 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.VehicleController",
+    "Method": "GetByPlate",
+    "RelativePath": "api/Vehicle/{plateNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "plateNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.VehicleController",
+    "Method": "Delete",
+    "RelativePath": "api/Vehicle/{plateNumber}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "plateNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.VehicleController",
+    "Method": "ListAll",
+    "RelativePath": "api/Vehicle/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.VehicleController",
+    "Method": "Register",
+    "RelativePath": "api/Vehicle/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerRequest",
+        "Type": "VehicleService.RegisterVehicleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.VehicleController",
+    "Method": "Update",
+    "RelativePath": "api/Vehicle/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRequest",
+        "Type": "VehicleService.UpdateVehicleRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

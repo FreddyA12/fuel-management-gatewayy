@@ -1,0 +1,2 @@
+obj\Release\net8.0\Protos/Vehicle.cs \
+obj\Release\net8.0\Protos/VehicleGrpc.cs: Protos/vehicle.proto
