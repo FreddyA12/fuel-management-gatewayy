@@ -1,7 +1,7 @@
 ﻿using Authentication.Grpc;
 
 var builder = WebApplication.CreateBuilder(args);
-// Configurar CORS para permitir cualquier host
+// Configurar CORS 
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
