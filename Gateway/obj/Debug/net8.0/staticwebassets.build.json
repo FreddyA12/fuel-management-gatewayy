@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "tvaDp8Mh+sZvx8UiDnsR6ZILD7/ljvf5y2I+mG9roUs=",
+  "Hash": "4CANMBoSFcvZI2TnUyPfCUcee3lMf9aHno4z5OchSZw=",
   "Source": "Gateway",
   "BasePath": "_content/Gateway",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\aliso\\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\\Escritorio\\FueManagement\\fuel-management-gatewayy\\AuthService\\AuthService.csproj",
+      "Identity": "C:\\Users\\Melan\\OneDrive\\Documents\\SOFTWARE\\Sexto Semestre\\Aplicaciones Distribuidas\\proyecto\\fuel-management-gatewayy\\AuthService\\AuthService.csproj",
       "Version": 2,
       "Source": "AuthService",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -18,7 +18,7 @@
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     },
     {
-      "Identity": "C:\\Users\\aliso\\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\\Escritorio\\FueManagement\\fuel-management-gatewayy\\VehicleService\\VehicleService.csproj",
+      "Identity": "C:\\Users\\Melan\\OneDrive\\Documents\\SOFTWARE\\Sexto Semestre\\Aplicaciones Distribuidas\\proyecto\\fuel-management-gatewayy\\VehicleService\\VehicleService.csproj",
       "Version": 2,
       "Source": "VehicleService",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",

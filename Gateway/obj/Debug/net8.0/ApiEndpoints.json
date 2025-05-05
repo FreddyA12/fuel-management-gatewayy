@@ -82,7 +82,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "registerRequest",
+        "Name": "request",
         "Type": "VehicleService.RegisterVehicleRequest",
         "IsRequired": true
       }
