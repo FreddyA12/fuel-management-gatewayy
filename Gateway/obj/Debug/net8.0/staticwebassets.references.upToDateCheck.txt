@@ -16,3 +16,31 @@ C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribui
 C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribuidas\proyecto\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribuidas\proyecto\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribuidas\proyecto\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
