@@ -12,6 +12,7 @@
           "Google.Protobuf": "3.25.1",
           "Grpc.Net.Client": "2.71.0",
           "Grpc.Tools": "2.71.0",
+          "RouteService": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2",
           "VehicleService": "1.0.0"
         },
@@ -246,6 +247,7 @@
           }
         }
       },
+      "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {},
       "MySqlConnector/2.3.5": {
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "8.0.0"
@@ -330,6 +332,20 @@
         },
         "runtime": {
           "AuthService.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "RouteService/1.0.0": {
+        "dependencies": {
+          "Grpc.AspNetCore": "2.57.0",
+          "Microsoft.EntityFrameworkCore": "8.0.4",
+          "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
+          "Pomelo.EntityFrameworkCore.MySql": "8.0.2"
+        },
+        "runtime": {
+          "RouteService.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -566,6 +582,13 @@
       "path": "microsoft.openapi/1.6.14",
       "hashPath": "microsoft.openapi.1.6.14.nupkg.sha512"
     },
+    "Microsoft.VisualStudio.Azure.Containers.Tools.Targets/1.21.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8NudeHOE56YsY59HYY89akRMup8Ho+7Y3cADTGjajjWroXVU9RQai2nA6PfteB8AuzmRHZ5NZQB2BnWhQEul5g==",
+      "path": "microsoft.visualstudio.azure.containers.tools.targets/1.21.0",
+      "hashPath": "microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
+    },
     "MySqlConnector/2.3.5": {
       "type": "package",
       "serviceable": true,
@@ -616,6 +639,11 @@
       "hashPath": "system.identitymodel.tokens.jwt.7.1.2.nupkg.sha512"
     },
     "AuthService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RouteService/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

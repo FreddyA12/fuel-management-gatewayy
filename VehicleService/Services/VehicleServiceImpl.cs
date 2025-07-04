@@ -98,6 +98,7 @@ namespace VehicleService.Services
                 FuelConsumptionByKm = v.FuelConsumptionByKm,
                 Model = v.Model
             }));
+            
 
             return response;
         }

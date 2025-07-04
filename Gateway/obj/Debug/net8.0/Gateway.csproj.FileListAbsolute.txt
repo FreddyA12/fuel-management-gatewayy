@@ -199,16 +199,28 @@ C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagemen
 C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.pdb
 C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.genruntimeconfig.cache
 C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\ref\Gateway.dll
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\AuthService.staticwebassets.endpoints.json
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\appsettings.Development.json
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\appsettings.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.csproj.AssemblyReference.cache
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.AssemblyInfoInputs.cache
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.AssemblyInfo.cs
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.csproj.CoreCompileInputs.cache
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.sourcelink.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\AuthService.deps.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\AuthService.runtimeconfig.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\AuthService.staticwebassets.endpoints.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\AuthService.exe
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\VehicleService.deps.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\VehicleService.runtimeconfig.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\VehicleService.staticwebassets.endpoints.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\VehicleService.exe
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\RouteService.deps.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\RouteService.runtimeconfig.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\RouteService.staticwebassets.endpoints.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\RouteService.exe
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\appsettings.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\Gateway.staticwebassets.endpoints.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\Gateway.exe
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\Gateway.deps.json
@@ -238,17 +250,11 @@ C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\AuthService.dll
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\RouteService.dll
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\VehicleService.dll
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\AuthService.pdb
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\VehicleService.pdb
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.csproj.AssemblyReference.cache
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.AssemblyInfoInputs.cache
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.AssemblyInfo.cs
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.csproj.CoreCompileInputs.cache
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\Gateway.sourcelink.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\bin\Debug\net8.0\RouteService.pdb
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\scopedcss\bundle\Gateway.styles.css
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\Gateway\obj\Debug\net8.0\staticwebassets.development.json

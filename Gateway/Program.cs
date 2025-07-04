@@ -28,7 +28,19 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(o =>
 // Configurar cliente gRPC para VehicleService
 builder.Services.AddGrpcClient<VehicleService.VehicleService.VehicleServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5124");
+    o.Address = new Uri("http://localhost:5183");
+}).ConfigurePrimaryHttpMessageHandler(() =>
+{
+    return new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+    };
+});
+
+// Configurar cliente gRPC para RouteService
+builder.Services.AddGrpcClient<RouteService.Grpc.RouteService.RouteServiceClient>(o =>
+{
+    o.Address = new Uri("http://localhost:5184");
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler

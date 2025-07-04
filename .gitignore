@@ -1,0 +1,25 @@
+# Visual Studio / Rider / VSCode files
+.vs/
+*.vsix
+*.vscode/
+
+# Binarios y archivos de compilación
+bin/
+obj/
+
+# Archivos de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales y de índice (como .vsidx)
+*.vsidx
+
+# Archivos de logs
+*.log
+
+# Otros archivos generados
+*.dll
+*.exe
+*.pdb
