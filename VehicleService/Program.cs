@@ -6,6 +6,16 @@ using Pomelo.EntityFrameworkCore.MySql;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+// Configurar Kestrel para HTTP/2 sin TLS en puerto 5123 (o el que uses)
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenLocalhost(5183, listenOptions =>
+    {
+        listenOptions.Protocols = Microsoft.AspNetCore.Server.Kestrel.Core.HttpProtocols.Http2;
+    });
+});
+
 // Agregar servicios al contenedor
 builder.Services.AddGrpc();
 

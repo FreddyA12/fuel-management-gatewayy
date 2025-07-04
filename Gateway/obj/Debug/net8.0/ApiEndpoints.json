@@ -32,6 +32,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FuelManagementGateway.Controllers.RouteController",
+    "Method": "GetById",
+    "RelativePath": "api/Route/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.RouteController",
+    "Method": "Delete",
+    "RelativePath": "api/Route/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.RouteController",
+    "Method": "ListAll",
+    "RelativePath": "api/Route/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.RouteController",
+    "Method": "Register",
+    "RelativePath": "api/Route/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "RouteService.Grpc.RegisterRouteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FuelManagementGateway.Controllers.RouteController",
+    "Method": "Update",
+    "RelativePath": "api/Route/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateRequest",
+        "Type": "RouteService.Grpc.UpdateRouteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FuelManagementGateway.Controllers.VehicleController",
     "Method": "GetByPlate",
     "RelativePath": "api/Vehicle/{plateNumber}",

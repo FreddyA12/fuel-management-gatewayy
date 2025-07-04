@@ -1,0 +1,72 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "RouteService.Grpc";
+
+service RouteService {
+  rpc Register (RegisterRouteRequest) returns (RegisterRouteResponse);
+  rpc GetById (GetRouteRequest) returns (GetRouteResponse);
+  rpc Update (UpdateRouteRequest) returns (UpdateRouteResponse);
+  rpc Delete (DeleteRouteRequest) returns (DeleteRouteResponse);
+  rpc ListAll (Empty) returns (ListAllRoutesResponse);
+}
+
+message Empty {}
+
+message RegisterRouteRequest {
+  string name = 1;
+  string origin = 2;
+  string destiny = 3;
+  double distance_km = 4;
+  double est_consumption_per_km = 5;
+}
+
+message RegisterRouteResponse {
+  string status = 1;
+}
+
+message GetRouteRequest {
+  int32 id = 1;
+}
+
+message GetRouteResponse {
+  int32 id = 1;
+  string name = 2;
+  string origin = 3;
+  string destiny = 4;
+  double distance_km = 5;
+  double est_consumption_per_km = 6;
+}
+
+message UpdateRouteRequest {
+  int32 id = 1;
+  string name = 2;
+  string origin = 3;
+  string destiny = 4;
+  double distance_km = 5;
+  double est_consumption_per_km = 6;
+}
+
+message UpdateRouteResponse {
+  string status = 1;
+}
+
+message DeleteRouteRequest {
+  int32 id = 1;
+}
+
+message DeleteRouteResponse {
+  string status = 1;
+}
+
+message RouteItem {
+  int32 id = 1;
+  string name = 2;
+  string origin = 3;
+  string destiny = 4;
+  double distance_km = 5;
+  double est_consumption_per_km = 6;
+}
+
+message ListAllRoutesResponse {
+  repeated RouteItem routes = 1;
+}
