@@ -1,4 +1,5 @@
 ﻿using Authentication.Grpc;
+using FuelService.Grpc;
 
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 var builder = WebApplication.CreateBuilder(args);
@@ -41,6 +42,18 @@ builder.Services.AddGrpcClient<VehicleService.VehicleService.VehicleServiceClien
 builder.Services.AddGrpcClient<RouteService.Grpc.RouteService.RouteServiceClient>(o =>
 {
     o.Address = new Uri("http://localhost:5184");
+}).ConfigurePrimaryHttpMessageHandler(() =>
+{
+    return new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+    };
+});
+
+// Configurar cliente gRPC para FuelService
+builder.Services.AddGrpcClient<FuelService.Grpc.FuelConsumptionService.FuelConsumptionServiceClient>(o =>
+{
+    o.Address = new Uri("http://localhost:5185"); 
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler
