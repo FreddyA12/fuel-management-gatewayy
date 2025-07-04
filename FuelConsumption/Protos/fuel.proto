@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+option csharp_namespace = "FuelService.Grpc";
+
+service FuelConsumptionService {
+  rpc Register (RegisterFuelConsumptionRequest) returns (RegisterFuelConsumptionResponse);
+  rpc ListAll (Empty) returns (ListAllFuelConsumptionsResponse);
+}
+
+message Empty {}
+
+message RegisterFuelConsumptionRequest {
+  int32 vehicle_id = 1;
+  int32 route_id = 2;
+  int32 driver_id = 3;
+  string date = 4; // ISO 8601 format e.g., "2025-07-04T12:30:00"
+  double actual_consumption = 5;
+}
+
+message RegisterFuelConsumptionResponse {
+  string status = 1;
+}
+
+message FuelConsumptionItem {
+  int32 id = 1;
+  int32 vehicle_id = 2;
+  int32 route_id = 3;
+  int32 driver_id = 4;
+  string date = 5;
+  double actual_consumption = 6;
+}
+
+message ListAllFuelConsumptionsResponse {
+  repeated FuelConsumptionItem consumptions = 1;
+}
