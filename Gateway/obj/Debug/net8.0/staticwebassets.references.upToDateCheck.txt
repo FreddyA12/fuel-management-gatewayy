@@ -56,3 +56,31 @@ C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribui
 C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribuidas\proyecto\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribuidas\proyecto\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Melan\OneDrive\Documents\SOFTWARE\Sexto Semestre\Aplicaciones Distribuidas\proyecto\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\AuthService\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\fredd\OneDrive\Escritorio\6SWA\Aplicaciones Distribuidas\Proyecto-fuel\gatw\fuel-management-gatewayy\VehicleService\obj\Debug\net8.0\staticwebassets.build.json

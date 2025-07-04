@@ -1,5 +1,6 @@
 ﻿using Authentication.Grpc;
 
+AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 var builder = WebApplication.CreateBuilder(args);
 // Configurar CORS 
 builder.Services.AddCors(options =>
@@ -15,7 +16,7 @@ builder.Services.AddCors(options =>
 // Configurar cliente gRPC para AuthService
 builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(o =>
 {
-    o.Address = new Uri("https://localhost:44310");
+    o.Address = new Uri("http://localhost:5123");
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler
@@ -27,7 +28,7 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(o =>
 // Configurar cliente gRPC para VehicleService
 builder.Services.AddGrpcClient<VehicleService.VehicleService.VehicleServiceClient>(o =>
 {
-    o.Address = new Uri("https://localhost:44392");
+    o.Address = new Uri("http://localhost:5124");
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler

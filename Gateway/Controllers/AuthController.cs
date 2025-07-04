@@ -20,8 +20,7 @@ namespace FuelManagementGateway.Controllers
         public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
         {
             var response = await _authServiceClient.RegisterAsync(registerRequest);
-
-            if (response.Status != "Success")
+            if (response.Status != "OK")
             {
                 return BadRequest("Failed to register user.");
             }
