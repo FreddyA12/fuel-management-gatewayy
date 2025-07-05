@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+option csharp_namespace = "DriverService";
+
+package driver;
+
+service DriverService {
+  rpc Register (RegisterDriverRequest) returns (RegisterDriverResponse);
+  rpc GetByIdentification (GetDriverRequest) returns (GetDriverResponse);
+  rpc Update (UpdateDriverRequest) returns (UpdateDriverResponse);
+  rpc Delete (DeleteDriverRequest) returns (DeleteDriverResponse);
+  rpc ListAll (Empty) returns (ListAllDriversResponse);
+}
+
+message RegisterDriverRequest {
+  string name = 1;
+  string identificationNumber = 2;
+  bool available = 3;
+  string machineryType = 4;
+}
+
+message RegisterDriverResponse {
+  string status = 1;
+}
+
+message GetDriverRequest {
+  string identificationNumber = 1;
+}
+
+message GetDriverResponse {
+  string name = 1;
+  string identificationNumber = 2;
+  bool available = 3;
+  string machineryType = 4;
+}
+
+message UpdateDriverRequest {
+  string identificationNumber = 1;
+  string name = 2;
+  bool available = 3;
+  string machineryType = 4;
+}
+
+message UpdateDriverResponse {
+  string status = 1;
+}
+
+message DeleteDriverRequest {
+  string identificationNumber = 1;
+}
+
+message DeleteDriverResponse {
+  string status = 1;
+}
+
+message DriverItem {
+  string name = 1;
+  string identificationNumber = 2;
+  bool available = 3;
+  string machineryType = 4;
+}
+
+message ListAllDriversResponse {
+  repeated DriverItem drivers = 1;
+}
+
+message Empty {}

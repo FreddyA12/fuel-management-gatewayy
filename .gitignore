@@ -1,25 +1,58 @@
-# Visual Studio / Rider / VSCode files
+# Archivos y carpetas de Visual Studio
 .vs/
-*.vsix
-*.vscode/
-
-# Binarios y archivos de compilación
-bin/
-obj/
-
-# Archivos de usuario
-*.user
 *.suo
+*.user
 *.userosscache
 *.sln.docstates
 
-# Archivos temporales y de índice (como .vsidx)
-*.vsidx
+# Rider
+.idea/
 
-# Archivos de logs
+# VSCode
+.vscode/
+
+# Binarios y carpetas de build
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
 *.log
-
-# Otros archivos generados
-*.dll
-*.exe
+*.vsidx
 *.pdb
+*.cache
+*.db
+*.exe
+*.dll
+*.tmp
+
+# Archivos de gRPC y protobuffers generados
+**/*.csproj.user
+**/Protos/*.cs
+**/Protos/*Grpc.cs
+**/*.protodep
+
+# Archivos de NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Archivos generados por Docker o contenedores
+Dockerfile.*
+docker-compose*
+
+# Configuración temporal
+*.launch.json
+*.sln.ide
+
+# Ignorar todos los archivos generados por compilación
+*.AssemblyInfo.cs
+*.Generated.cs
+
+# Otros archivos de sistema
+Thumbs.db
+ehthumbs.db
+.DS_Store

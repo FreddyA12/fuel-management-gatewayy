@@ -20,13 +20,17 @@
 	
   <ItemGroup>
     <ProjectReference Include="..\AuthService\AuthService.csproj" />
+    <ProjectReference Include="..\DriverService\DriverService.csproj" />
     <ProjectReference Include="..\VehicleService\VehicleService.csproj" />
 	  <ProjectReference Include="..\RouteService\RouteService.csproj" />
+	  <ProjecReference Include="..\DriverService\DriverService.csproj" />
   </ItemGroup>
 
 	<ItemGroup>
 		<Protobuf Include="Protos\auth.proto" GrpcServices="Client" />
+		<Protobuf Include="Protos\driver.proto" GrpcServices="Client" />
 		<Protobuf Include="Protos\route.proto" GrpcServices="Client" />
+		
 		<Protobuf Include="Protos\vehicle.proto" GrpcServices="Client" />
 	</ItemGroup>
 

@@ -49,6 +49,18 @@ builder.Services.AddGrpcClient<RouteService.Grpc.RouteService.RouteServiceClient
     };
 });
 
+// Cliente gRPC para DriverService (HTTPS)
+builder.Services.AddGrpcClient<DriverService.DriverService.DriverServiceClient>(o =>
+{
+    o.Address = new Uri("https://localhost:7158");
+}).ConfigurePrimaryHttpMessageHandler(() =>
+{
+    return new HttpClientHandler
+    {
+        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+    };
+});
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
