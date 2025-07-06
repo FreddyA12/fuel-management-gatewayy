@@ -13,9 +13,10 @@ message RegisterFuelConsumptionRequest {
   int32 vehicle_id = 1;
   int32 route_id = 2;
   int32 driver_id = 3;
-  string date = 4; // ISO 8601 format
+  string date = 4; 
   double actual_consumption = 5;
-  string state = 6; // <-- NUEVO CAMPO
+  string state = 6; 
+  double estimated_consumption_per_km = 7; 
 }
 
 message RegisterFuelConsumptionResponse {
@@ -29,11 +30,12 @@ message FuelConsumptionItem {
   int32 driver_id = 4;
   string date = 5;
   double actual_consumption = 6;
-  string state = 7; // <-- NUEVO CAMPO
+  string state = 7;
+  double estimated_consumption_per_km = 8; 
 
-  VehicleDto vehicle = 8;
-  DriverDto driver = 9;
-  RouteDto route = 10;
+  VehicleDto vehicle = 9;
+  DriverDto driver = 10;
+  RouteDto route = 11;
 }
 
 message ListAllFuelConsumptionsResponse {
@@ -46,7 +48,7 @@ message VehicleDto {
   string machinery_type = 3;
   bool is_operational = 4;
   double fuel_capacity = 5;
-  string registered_at = 6; // ISO 8601 string
+  string registered_at = 6; 
   double fuel_consumption_by_km = 7;
   string model = 8;
 }
@@ -65,5 +67,5 @@ message RouteDto {
   string origin = 3;
   string destiny = 4;
   double distance_km = 5;
-  double estimated_consumption_per_km = 6;
+  
 }

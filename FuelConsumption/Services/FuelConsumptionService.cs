@@ -26,7 +26,8 @@ namespace FuelConsumption.Services
                 DriverId = request.DriverId,
                 Date = DateTime.Parse(request.Date),
                 ActualConsumption = request.ActualConsumption,
-                State = request.State
+                State = request.State,
+                EstimatedConsumptionPerKm = request.EstimatedConsumptionPerKm
             };
 
             _db.FuelConsumptions.Add(record);
@@ -56,6 +57,7 @@ namespace FuelConsumption.Services
                     Date = r.Date.ToString("yyyy-MM-dd HH:mm:ss"),
                     ActualConsumption = r.ActualConsumption,
                     State = r.State,
+                    EstimatedConsumptionPerKm = r.EstimatedConsumptionPerKm,
 
                     Vehicle = r.Vehicle == null ? null : new VehicleDto
                     {
@@ -84,8 +86,8 @@ namespace FuelConsumption.Services
                         Name = r.Route.Name,
                         Origin = r.Route.Origin,
                         Destiny = r.Route.Destiny,
-                        DistanceKm = r.Route.DistanceKm,
-                        EstimatedConsumptionPerKm = r.Route.EstimatedConsumptionPerKm
+                        DistanceKm = r.Route.DistanceKm
+                    
                     }
                 });
             }

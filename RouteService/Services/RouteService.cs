@@ -23,7 +23,7 @@ namespace RouteService.Services
                 Origin = request.Origin,
                 Destiny = request.Destiny,
                 DistanceKm = request.DistanceKm,
-                EstimatedConsumptionPerKm = request.EstConsumptionPerKm,
+                
                 StartLat = request.StartLat,
                 StartLng = request.StartLng,
                 EndLat = request.EndLat,
@@ -50,7 +50,7 @@ namespace RouteService.Services
                 Origin = route.Origin,
                 Destiny = route.Destiny,
                 DistanceKm = route.DistanceKm,
-                EstConsumptionPerKm = route.EstimatedConsumptionPerKm,
+                
                 StartLat = route.StartLat,
                 StartLng = route.StartLng,
                 EndLat = route.EndLat,
@@ -69,7 +69,7 @@ namespace RouteService.Services
             route.Origin = request.Origin;
             route.Destiny = request.Destiny;
             route.DistanceKm = request.DistanceKm;
-            route.EstimatedConsumptionPerKm = request.EstConsumptionPerKm;
+           
             route.StartLat = request.StartLat;
             route.StartLng = request.StartLng;
             route.EndLat = request.EndLat;
@@ -105,7 +105,7 @@ namespace RouteService.Services
                 Origin = r.Origin,
                 Destiny = r.Destiny,
                 DistanceKm = r.DistanceKm,
-                EstConsumptionPerKm = r.EstimatedConsumptionPerKm,
+               
                 StartLat = r.StartLat,
                 StartLng = r.StartLng,
                 EndLat = r.EndLat,

@@ -23,8 +23,6 @@ namespace RouteService.Models
         [Column("distance_km")]
         public double DistanceKm { get; set; }
 
-        [Column("est_consumption_per_km")]
-        public double EstimatedConsumptionPerKm { get; set; }
 
         [Column("start_lat")]
         public double StartLat { get; set; }

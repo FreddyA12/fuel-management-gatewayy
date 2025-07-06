@@ -38,6 +38,10 @@ namespace FuelConsumption.Models
         [StringLength(50)]
         public string? State { get; set; }
 
+
+        [Column("est_consumption_per_km")]
+        public double EstimatedConsumptionPerKm { get; set; }
+
         // Relaciones (opcional si usas EF Navigation Properties)
         public Vehicle? Vehicle { get; set; }
         public RouteEntity? Route { get; set; }
