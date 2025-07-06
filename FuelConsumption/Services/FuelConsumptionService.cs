@@ -19,6 +19,25 @@ namespace FuelConsumption.Services
 
         public override async Task<RegisterFuelConsumptionResponse> Register(RegisterFuelConsumptionRequest request, ServerCallContext context)
         {
+            // Validar disponibilidad de vehículo
+            var activeVehicleTrip = await _db.FuelConsumptions
+                .FirstOrDefaultAsync(fc => fc.VehicleId == request.VehicleId && fc.State == "INICIADO");
+
+            if (activeVehicleTrip != null)
+            {
+                throw new RpcException(new Status(StatusCode.AlreadyExists, "El vehículo ya está en un viaje activo."));
+            }
+
+            // Validar disponibilidad de chofer
+            var activeDriverTrip = await _db.FuelConsumptions
+                .FirstOrDefaultAsync(fc => fc.DriverId == request.DriverId && fc.State == "INICIADO");
+
+            if (activeDriverTrip != null)
+            {
+                throw new RpcException(new Status(StatusCode.AlreadyExists, "El chofer ya está en un viaje activo."));
+            }
+
+            // Si están disponibles, registrar nuevo viaje
             var record = new Models.FuelConsumption
             {
                 VehicleId = request.VehicleId,
@@ -26,16 +45,25 @@ namespace FuelConsumption.Services
                 DriverId = request.DriverId,
                 Date = DateTime.Parse(request.Date),
                 ActualConsumption = request.ActualConsumption,
-                State = request.State,
-                EstimatedConsumptionPerKm = request.EstimatedConsumptionPerKm
+                EstimatedConsumptionPerKm = request.EstimatedConsumptionPerKm,
+                State = "INICIADO",
+
+               
             };
+
+            //Cambiar el estado del chofer, avality a false
+
+            var driver = await _db.Drivers.FindAsync(request.DriverId);
+            if (driver != null)
+            {
+                driver.Available = false;
+            }
 
             _db.FuelConsumptions.Add(record);
             await _db.SaveChangesAsync();
 
             return new RegisterFuelConsumptionResponse { Status = "OK" };
         }
-
         public override async Task<ListAllFuelConsumptionsResponse> ListAll(Empty request, ServerCallContext context)
         {
             var records = await _db.FuelConsumptions
@@ -93,6 +121,31 @@ namespace FuelConsumption.Services
             }
 
             return response;
+        }
+
+        public override async Task<FinalizeTripResponse> FinalizeTrip(FinalizeTripRequest request, ServerCallContext context)
+        {
+            var trip = await _db.FuelConsumptions.FindAsync(request.Id);
+            if (trip == null)
+            {
+                throw new RpcException(new Status(StatusCode.NotFound, "Viaje no encontrado."));
+            }
+
+            // Estado fijo: Finalizado
+            trip.State = "FINALIZADO";
+
+            //Cambiar el estado del chofer, avality a true
+
+            var driver = await _db.Drivers.FindAsync(trip.DriverId);
+            if (driver != null)
+            {
+                driver.Available = true;
+            }
+            
+            await _db.SaveChangesAsync();
+            
+
+            return new FinalizeTripResponse { Status = "OK" };
         }
     }
     }

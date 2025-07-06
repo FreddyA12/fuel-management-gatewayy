@@ -5,6 +5,7 @@ option csharp_namespace = "FuelService.Grpc";
 service FuelConsumptionService {
   rpc Register (RegisterFuelConsumptionRequest) returns (RegisterFuelConsumptionResponse);
   rpc ListAll (Empty) returns (ListAllFuelConsumptionsResponse);
+  rpc FinalizeTrip (FinalizeTripRequest) returns (FinalizeTripResponse);
 }
 
 message Empty {}
@@ -68,4 +69,11 @@ message RouteDto {
   string destiny = 4;
   double distance_km = 5;
   
+}
+message FinalizeTripRequest {
+  int32 id = 1;
+}
+
+message FinalizeTripResponse {
+  string status = 1;
 }

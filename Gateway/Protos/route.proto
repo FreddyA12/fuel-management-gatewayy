@@ -17,11 +17,11 @@ message RegisterRouteRequest {
   string origin = 2;
   string destiny = 3;
   double distance_km = 4;
-  double est_consumption_per_km = 5;
-  double start_lat = 6;
-  double start_lng = 7;
-  double end_lat = 8;
-  double end_lng = 9;
+
+  double start_lat = 5;
+  double start_lng = 6;
+  double end_lat = 7;
+  double end_lng = 8;
 }
 
 message RegisterRouteResponse {
@@ -38,11 +38,11 @@ message GetRouteResponse {
   string origin = 3;
   string destiny = 4;
   double distance_km = 5;
-  double est_consumption_per_km = 6;
-  double start_lat = 7;
-  double start_lng = 8;
-  double end_lat = 9;
-  double end_lng = 10;
+
+  double start_lat = 6;
+  double start_lng = 7;
+  double end_lat = 8;
+  double end_lng = 9;
 }
 
 message UpdateRouteRequest {
@@ -51,11 +51,11 @@ message UpdateRouteRequest {
   string origin = 3;
   string destiny = 4;
   double distance_km = 5;
-  double est_consumption_per_km = 6;
-  double start_lat = 7;
-  double start_lng = 8;
-  double end_lat = 9;
-  double end_lng = 10;
+
+  double start_lat = 6;
+  double start_lng = 7;
+  double end_lat = 8;
+  double end_lng = 9;
 }
 
 message UpdateRouteResponse {
@@ -71,16 +71,16 @@ message DeleteRouteResponse {
 }
 
 message RouteItem {
-  int32 id = 1;
+   int32 id = 1;
   string name = 2;
   string origin = 3;
   string destiny = 4;
   double distance_km = 5;
-  double est_consumption_per_km = 6;
-  double start_lat = 7;
-  double start_lng = 8;
-  double end_lat = 9;
-  double end_lng = 10;
+
+  double start_lat = 6;
+  double start_lng = 7;
+  double end_lat = 8;
+  double end_lng = 9;
 }
 
 message ListAllRoutesResponse {

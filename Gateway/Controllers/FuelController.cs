@@ -54,5 +54,29 @@ namespace FuelManagementGateway.Controllers
                 return StatusCode(500, $"Error gRPC: {ex.Status.Detail}");
             }
         }
+
+        [HttpPost("finalize/{id}")]
+        public async Task<IActionResult> FinalizeTrip([FromRoute][Required] int id)
+        {
+            if (id <= 0)
+                return BadRequest("ID inválido.");
+
+            try
+            {
+                var response = await _fuelServiceClient.FinalizeTripAsync(new FinalizeTripRequest { Id = id });
+
+                return response.Status == "OK"
+                    ? Ok("Viaje finalizado exitosamente.")
+                    : BadRequest("No se pudo finalizar el viaje.");
+            }
+            catch (RpcException ex) when (ex.StatusCode == Grpc.Core.StatusCode.NotFound)
+            {
+                return NotFound("Viaje no encontrado.");
+            }
+            catch (RpcException ex)
+            {
+                return StatusCode(500, $"Error gRPC: {ex.Status.Detail}");
+            }
+        }
     }
 }
