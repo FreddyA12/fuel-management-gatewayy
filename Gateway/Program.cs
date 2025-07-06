@@ -1,5 +1,9 @@
 ﻿using Authentication.Grpc;
 using FuelService.Grpc;
+using Serilog;
+using Polly;
+using Polly.Extensions.Http;
+using System.Net.Http;
 
 AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2UnencryptedSupport", true);
 var builder = WebApplication.CreateBuilder(args);
@@ -14,17 +18,57 @@ builder.Services.AddCors(options =>
     });
 });
 
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .WaitAndRetryAsync(
+            retryCount: 3,
+            sleepDurationProvider: attempt => TimeSpan.FromSeconds(Math.Pow(2, attempt)),
+            onRetry: (outcome, delay, attempt, context) =>
+            {
+                Console.WriteLine($"🔁 Retry {attempt} after {delay.TotalSeconds} seconds: {outcome.Exception?.Message}");
+            });
+}
+
+static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
+{
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .CircuitBreakerAsync(
+            handledEventsAllowedBeforeBreaking: 2,
+            durationOfBreak: TimeSpan.FromSeconds(10),
+            onBreak: (outcome, timespan) =>
+            {
+                Console.WriteLine($" Circuit broken for {timespan.TotalSeconds}s: {outcome.Exception?.Message}");
+            },
+            onReset: () => Console.WriteLine(" Circuit reset"),
+            onHalfOpen: () => Console.WriteLine(" Circuit in half-open state")
+        );
+}
+
+//Logs
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug() 
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .WriteTo.File("logs/gateway-log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
+
 // Configurar cliente gRPC para AuthService
 builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(o =>
 {
     o.Address = new Uri("http://localhost:5123");
-}).ConfigurePrimaryHttpMessageHandler(() =>
+})
+.ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
 {
-    return new HttpClientHandler
-    {
-        ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
-    };
-});
+    ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator
+})
+.AddPolicyHandler(GetRetryPolicy())
+.AddPolicyHandler(GetCircuitBreakerPolicy());
+
 
 // Configurar cliente gRPC para VehicleService
 builder.Services.AddGrpcClient<VehicleService.VehicleService.VehicleServiceClient>(o =>
