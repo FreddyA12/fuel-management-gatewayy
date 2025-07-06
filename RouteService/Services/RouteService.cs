@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using RouteService.Grpc;
 using static RouteService.Grpc.RouteService;
-using VehicleService.Models;
+using RouteService.Models;
 
 namespace RouteService.Services
 {
@@ -17,13 +17,17 @@ namespace RouteService.Services
 
         public override async Task<RegisterRouteResponse> Register(RegisterRouteRequest request, ServerCallContext context)
         {
-            var route = new VehicleService.Models.Route
+            var route = new RouteEntity
             {
                 Name = request.Name,
                 Origin = request.Origin,
                 Destiny = request.Destiny,
                 DistanceKm = request.DistanceKm,
-                EstimatedConsumptionPerKm = request.EstConsumptionPerKm
+                EstimatedConsumptionPerKm = request.EstConsumptionPerKm,
+                StartLat = request.StartLat,
+                StartLng = request.StartLng,
+                EndLat = request.EndLat,
+                EndLng = request.EndLng
             };
 
             _db.Routes.Add(route);
@@ -46,7 +50,11 @@ namespace RouteService.Services
                 Origin = route.Origin,
                 Destiny = route.Destiny,
                 DistanceKm = route.DistanceKm,
-                EstConsumptionPerKm = route.EstimatedConsumptionPerKm
+                EstConsumptionPerKm = route.EstimatedConsumptionPerKm,
+                StartLat = route.StartLat,
+                StartLng = route.StartLng,
+                EndLat = route.EndLat,
+                EndLng = route.EndLng
             };
         }
 
@@ -62,6 +70,10 @@ namespace RouteService.Services
             route.Destiny = request.Destiny;
             route.DistanceKm = request.DistanceKm;
             route.EstimatedConsumptionPerKm = request.EstConsumptionPerKm;
+            route.StartLat = request.StartLat;
+            route.StartLng = request.StartLng;
+            route.EndLat = request.EndLat;
+            route.EndLng = request.EndLng;
 
             await _db.SaveChangesAsync();
 
@@ -93,7 +105,11 @@ namespace RouteService.Services
                 Origin = r.Origin,
                 Destiny = r.Destiny,
                 DistanceKm = r.DistanceKm,
-                EstConsumptionPerKm = r.EstimatedConsumptionPerKm
+                EstConsumptionPerKm = r.EstimatedConsumptionPerKm,
+                StartLat = r.StartLat,
+                StartLng = r.StartLng,
+                EndLat = r.EndLat,
+                EndLng = r.EndLng
             }));
 
             return response;

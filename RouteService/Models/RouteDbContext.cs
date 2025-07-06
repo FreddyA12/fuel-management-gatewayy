@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace VehicleService.Models
+namespace RouteService.Models
 {
     public class RouteDbContext : DbContext
     {
         public RouteDbContext(DbContextOptions<RouteDbContext> options) : base(options) { }
 
-        public DbSet<Route> Routes => Set<Route>();
+        public DbSet<RouteEntity> Routes => Set<RouteEntity>();
     }
 }

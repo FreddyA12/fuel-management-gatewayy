@@ -4,7 +4,7 @@ using Grpc.AspNetCore.Server;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 using Pomelo.EntityFrameworkCore.MySql;
 using RouteService.Services;
-using VehicleService.Models;
+using RouteService.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
