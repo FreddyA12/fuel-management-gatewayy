@@ -47,16 +47,33 @@ namespace DriverService.Services
             }
         }
 
-
-        public override async Task<GetDriverResponse> GetByIdentification(GetDriverRequest request, ServerCallContext context)
+        public override async Task<GetDriverResponse> GetById(GetDriverRequest request, ServerCallContext context)
         {
-            var driver = await _db.Drivers.FirstOrDefaultAsync(d => d.IdentificationNumber == request.IdentificationNumber);
+            var driver = await _db.Drivers.FirstOrDefaultAsync(d => d.Id == request.Id);
 
-            if (driver is null)
+            if (driver == null)
                 throw new RpcException(new Status(StatusCode.NotFound, "Chofer no encontrado"));
 
             return new GetDriverResponse
             {
+                Id = driver.Id,
+                Name = driver.Name,
+                IdentificationNumber = driver.IdentificationNumber,
+                Available = driver.Available,
+                MachineryType = driver.MachineryType
+            };
+        }
+
+        public override async Task<GetDriverResponse> GetByIdentificationNumber(IdentificationNumberRequest request, ServerCallContext context)
+        {
+            var driver = await _db.Drivers.FirstOrDefaultAsync(d => d.IdentificationNumber == request.IdentificationNumber);
+
+            if (driver == null)
+                throw new RpcException(new Status(StatusCode.NotFound, "Chofer no encontrado"));
+
+            return new GetDriverResponse
+            {
+                Id = driver.Id,
                 Name = driver.Name,
                 IdentificationNumber = driver.IdentificationNumber,
                 Available = driver.Available,
@@ -66,9 +83,9 @@ namespace DriverService.Services
 
         public override async Task<UpdateDriverResponse> Update(UpdateDriverRequest request, ServerCallContext context)
         {
-            var driver = await _db.Drivers.FirstOrDefaultAsync(d => d.IdentificationNumber == request.IdentificationNumber);
+            var driver = await _db.Drivers.FirstOrDefaultAsync(d => d.Id == request.Id);
 
-            if (driver is null)
+            if (driver == null)
                 throw new RpcException(new Status(StatusCode.NotFound, "Chofer no encontrado"));
 
             driver.Name = request.Name;
@@ -82,9 +99,9 @@ namespace DriverService.Services
 
         public override async Task<DeleteDriverResponse> Delete(DeleteDriverRequest request, ServerCallContext context)
         {
-            var driver = await _db.Drivers.FirstOrDefaultAsync(d => d.IdentificationNumber == request.IdentificationNumber);
+            var driver = await _db.Drivers.FirstOrDefaultAsync(d => d.Id == request.Id);
 
-            if (driver is null)
+            if (driver == null)
                 throw new RpcException(new Status(StatusCode.NotFound, "Chofer no encontrado"));
 
             _db.Drivers.Remove(driver);
@@ -100,6 +117,7 @@ namespace DriverService.Services
             var response = new ListAllDriversResponse();
             response.Drivers.AddRange(drivers.Select(d => new DriverItem
             {
+                Id = d.Id,
                 Name = d.Name,
                 IdentificationNumber = d.IdentificationNumber,
                 Available = d.Available,

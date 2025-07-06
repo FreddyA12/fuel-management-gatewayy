@@ -23,22 +23,25 @@ namespace Gateway.Controllers
 
             try
             {
-                // Comprobar si ya existe
                 try
                 {
-                    var exists = await _driverClient.GetByIdentificationAsync(
-                        new GetDriverRequest { IdentificationNumber = request.IdentificationNumber });
+                    var exists = await _driverClient.GetByIdentificationNumberAsync(
+                        new IdentificationNumberRequest { IdentificationNumber = request.IdentificationNumber });
 
                     if (!string.IsNullOrEmpty(exists?.IdentificationNumber))
-                        return Conflict("El chofer ya está registrado");
+                        return Conflict(new { message = "El chofer ya está registrado con esa cédula." });
                 }
                 catch (Grpc.Core.RpcException ex) when (ex.StatusCode == Grpc.Core.StatusCode.NotFound)
                 {
-                    // No existe, continuar
+                    // No existe, se puede continuar con el registro
                 }
 
                 var result = await _driverClient.RegisterAsync(request);
-                return result?.Status == "OK" ? Ok("Registro exitoso") : BadRequest("Error en el registro");
+
+                if (result?.Status == "OK")
+                    return Ok("Registro exitoso");
+
+                return BadRequest("Error en el registro");
             }
             catch (Exception ex)
             {
@@ -46,15 +49,16 @@ namespace Gateway.Controllers
             }
         }
 
-        [HttpGet("{identificationNumber}")]
-        public async Task<IActionResult> GetByIdentification([Required] string identificationNumber)
+
+        [HttpGet("{id:int}")]
+        public async Task<IActionResult> GetById([Required] int id)
         {
             try
             {
-                var request = new GetDriverRequest { IdentificationNumber = identificationNumber };
-                var response = await _driverClient.GetByIdentificationAsync(request);
+                var request = new GetDriverRequest { Id = id };
+                var response = await _driverClient.GetByIdAsync(request); 
 
-                if (string.IsNullOrEmpty(response.IdentificationNumber))
+                if (response == null || response.Id == 0)
                     return NotFound(new { message = "Chofer no encontrado" });
 
                 return Ok(response);
@@ -74,10 +78,10 @@ namespace Gateway.Controllers
                 : BadRequest("No se pudo actualizar");
         }
 
-        [HttpDelete("{identificationNumber}")]
-        public async Task<IActionResult> Delete([Required] string identificationNumber)
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> Delete([Required] int id)
         {
-            var result = await _driverClient.DeleteAsync(new DeleteDriverRequest { IdentificationNumber = identificationNumber });
+            var result = await _driverClient.DeleteAsync(new DeleteDriverRequest { Id = id });
             return result.Status == "Deleted"
                 ? Ok(new { message = "Chofer eliminado correctamente" })
                 : BadRequest("No se pudo eliminar");

@@ -6,10 +6,11 @@ package driver;
 
 service DriverService {
   rpc Register (RegisterDriverRequest) returns (RegisterDriverResponse);
-  rpc GetByIdentification (GetDriverRequest) returns (GetDriverResponse);
+  rpc GetById (GetDriverRequest) returns (GetDriverResponse);
   rpc Update (UpdateDriverRequest) returns (UpdateDriverResponse);
   rpc Delete (DeleteDriverRequest) returns (DeleteDriverResponse);
   rpc ListAll (Empty) returns (ListAllDriversResponse);
+  rpc GetByIdentificationNumber (IdentificationNumberRequest) returns (GetDriverResponse);
 }
 
 message RegisterDriverRequest {
@@ -19,23 +20,29 @@ message RegisterDriverRequest {
   string machineryType = 4;
 }
 
+message IdentificationNumberRequest {
+  string identificationNumber = 1;
+}
+
 message RegisterDriverResponse {
   string status = 1;
 }
 
 message GetDriverRequest {
-  string identificationNumber = 1;
+  int32 id = 1;
 }
 
 message GetDriverResponse {
-  string name = 1;
-  string identificationNumber = 2;
-  bool available = 3;
-  string machineryType = 4;
+  int32 id = 1;
+  string name = 2;
+  string identificationNumber = 3;
+  bool available = 4;
+  string machineryType = 5;
 }
 
+
 message UpdateDriverRequest {
-  string identificationNumber = 1;
+  int32 id = 1;
   string name = 2;
   bool available = 3;
   string machineryType = 4;
@@ -46,7 +53,7 @@ message UpdateDriverResponse {
 }
 
 message DeleteDriverRequest {
-  string identificationNumber = 1;
+  int32 id = 1;
 }
 
 message DeleteDriverResponse {
@@ -54,11 +61,13 @@ message DeleteDriverResponse {
 }
 
 message DriverItem {
-  string name = 1;
-  string identificationNumber = 2;
-  bool available = 3;
-  string machineryType = 4;
+  int32 id = 1;
+  string name = 2;
+  string identificationNumber = 3;
+  bool available = 4;
+  string machineryType = 5;
 }
+
 
 message ListAllDriversResponse {
   repeated DriverItem drivers = 1;
