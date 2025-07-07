@@ -27,6 +27,19 @@
     </ProjectReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="..\VehicleService\appsettings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="..\DriverService\appsettings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Update="..\RouteService\appsettings.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
 
   <ItemGroup>
     <Protobuf Include="Protos\fuel.proto" GrpcServices="Server" />
