@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAll", builder =>
     {
-        builder.WithOrigins("http://localhost:5173")
+        builder.WithOrigins("*")
                .AllowAnyMethod() 
                .AllowAnyHeader(); 
     });
@@ -60,7 +60,7 @@ builder.Host.UseSerilog();
 // Configurar cliente gRPC para AuthService
 builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5123");
+    o.Address = new Uri("http://authservice:5123");
 })
 .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
 {
@@ -73,7 +73,7 @@ builder.Services.AddGrpcClient<AuthService.AuthServiceClient>(o =>
 // Configurar cliente gRPC para VehicleService
 builder.Services.AddGrpcClient<VehicleService.VehicleService.VehicleServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5183");
+    o.Address = new Uri("http://vehicleservice:5183");
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler
@@ -85,7 +85,7 @@ builder.Services.AddGrpcClient<VehicleService.VehicleService.VehicleServiceClien
 // Configurar cliente gRPC para RouteService
 builder.Services.AddGrpcClient<RouteService.Grpc.RouteService.RouteServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5184");
+    o.Address = new Uri("http://routeservice:5184");
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler
@@ -97,7 +97,7 @@ builder.Services.AddGrpcClient<RouteService.Grpc.RouteService.RouteServiceClient
 // Configurar cliente gRPC para FuelService
 builder.Services.AddGrpcClient<FuelService.Grpc.FuelConsumptionService.FuelConsumptionServiceClient>(o =>
 {
-    o.Address = new Uri("http://localhost:5185"); 
+    o.Address = new Uri("http://fuelservice:5185");
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler
@@ -109,7 +109,7 @@ builder.Services.AddGrpcClient<FuelService.Grpc.FuelConsumptionService.FuelConsu
 // Cliente gRPC para DriverService (HTTPS)
 builder.Services.AddGrpcClient<DriverService.DriverService.DriverServiceClient>(o =>
 {
-    o.Address = new Uri("https://localhost:7158");
+    o.Address = new Uri("http://driverservice:7158");
 }).ConfigurePrimaryHttpMessageHandler(() =>
 {
     return new HttpClientHandler
