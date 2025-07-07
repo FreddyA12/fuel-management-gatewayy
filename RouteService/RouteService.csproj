@@ -18,6 +18,7 @@
 	<ItemGroup>
 		<Protobuf Include="Protos\route.proto" GrpcServices="Server" />
 	</ItemGroup>
+  
   <ItemGroup>
   <None Update="appsettings.json">
     <CopyToOutputDirectory>Never</CopyToOutputDirectory>
