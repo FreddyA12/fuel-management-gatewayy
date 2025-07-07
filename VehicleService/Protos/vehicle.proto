@@ -31,24 +31,28 @@ message GetVehicleRequest {
 }
 
 message GetVehicleResponse {
-  string plateNumber = 1;
-  string machineryType = 2;
-  bool isOperational = 3;
-  double fuelCapacity = 4;
-  string registeredAt = 5;
-  double fuelConsumptionByKm = 6;
-  string model = 7;
+  int32 id = 1;                       
+  string plateNumber = 2;
+  string machineryType = 3;
+  bool isOperational = 4;
+  double fuelCapacity = 5;
+  string registeredAt = 6;
+  double fuelConsumptionByKm = 7;
+  string model = 8;
 }
 
+
 message UpdateVehicleRequest {
-  string plateNumber = 1;
-  string machineryType = 2;
-  bool isOperational = 3;
-  double fuelCapacity = 4;
-  string registeredAt = 5;
-  double fuelConsumptionByKm = 6;
-  string model = 7;
+  int32 id = 1;                       
+  string plateNumber = 2;
+  string machineryType = 3;
+  bool isOperational = 4;
+  double fuelCapacity = 5;
+  string registeredAt = 6;
+  double fuelConsumptionByKm = 7;
+  string model = 8;
 }
+
 
 message UpdateVehicleResponse {
   string status = 1;
@@ -63,14 +67,16 @@ message DeleteVehicleResponse {
 }
 
 message VehicleItem {
-  string plateNumber = 1;
-  string machineryType = 2;
-  bool isOperational = 3;
-  double fuelCapacity = 4;
-  string registeredAt = 5;
-  double fuelConsumptionByKm = 6;
-  string model = 7;
+  int32 id = 1;                      
+  string plateNumber = 2;
+  string machineryType = 3;
+  bool isOperational = 4;
+  double fuelCapacity = 5;
+  string registeredAt = 6;
+  double fuelConsumptionByKm = 7;
+  string model = 8;
 }
+
 
 message ListAllVehiclesResponse {
   repeated VehicleItem vehicles = 1;

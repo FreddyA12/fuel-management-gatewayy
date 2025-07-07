@@ -41,6 +41,7 @@ namespace VehicleService.Services
 
             return new GetVehicleResponse
             {
+                Id = vehicle.Id, // ← Nuevo campo
                 PlateNumber = vehicle.PlateNumber,
                 MachineryType = vehicle.MachineryType,
                 IsOperational = vehicle.IsOperational,
@@ -49,6 +50,7 @@ namespace VehicleService.Services
                 FuelConsumptionByKm = vehicle.FuelConsumptionByKm,
                 Model = vehicle.Model
             };
+
         }
 
         public override async Task<UpdateVehicleResponse> Update(UpdateVehicleRequest request, ServerCallContext context)
@@ -90,6 +92,7 @@ namespace VehicleService.Services
             var response = new ListAllVehiclesResponse();
             response.Vehicles.AddRange(vehicles.Select(v => new VehicleItem
             {
+                Id = v.Id, // ← Nuevo campo
                 PlateNumber = v.PlateNumber,
                 MachineryType = v.MachineryType,
                 IsOperational = v.IsOperational,
@@ -98,7 +101,8 @@ namespace VehicleService.Services
                 FuelConsumptionByKm = v.FuelConsumptionByKm,
                 Model = v.Model
             }));
-            
+
+
 
             return response;
         }
