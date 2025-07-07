@@ -15,14 +15,18 @@
   <ItemGroup>
     <ProjectReference Include="..\VehicleService\VehicleService.csproj">
       <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>build;contentfiles;analyzers;runtime</ExcludeAssets>
     </ProjectReference>
     <ProjectReference Include="..\DriverService\DriverService.csproj">
       <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>build;contentfiles;analyzers;runtime</ExcludeAssets>
     </ProjectReference>
     <ProjectReference Include="..\RouteService\RouteService.csproj">
       <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>build;contentfiles;analyzers;runtime</ExcludeAssets>
     </ProjectReference>
   </ItemGroup>
+
 
   <ItemGroup>
     <Protobuf Include="Protos\fuel.proto" GrpcServices="Server" />
