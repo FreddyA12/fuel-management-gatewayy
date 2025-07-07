@@ -1,5 +1,6 @@
 ﻿using Authentication.Grpc;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 
 namespace FuelManagementGateway.Controllers
@@ -9,37 +10,62 @@ namespace FuelManagementGateway.Controllers
     public class AuthController : ControllerBase
     {
         private readonly AuthService.AuthServiceClient _authServiceClient;
+        private readonly ILogger<AuthController> _logger;
 
-        public AuthController(AuthService.AuthServiceClient authServiceClient)
+        public AuthController(AuthService.AuthServiceClient authServiceClient, ILogger<AuthController> logger)
         {
             _authServiceClient = authServiceClient;
+            _logger = logger;
         }
 
-        // Endpoint para registrar un nuevo usuario
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
         {
-            var response = await _authServiceClient.RegisterAsync(registerRequest);
-            if (response.Status != "OK")
-            {
-                return BadRequest("Failed to register user.");
-            }
+            _logger.LogInformation("Intentando registrar usuario: {Username}", registerRequest.Username);
 
-            return Ok(new { Message = "User registered successfully." });
+            try
+            {
+                var response = await _authServiceClient.RegisterAsync(registerRequest);
+
+                if (response.Status != "OK")
+                {
+                    _logger.LogWarning(" Falló el registro de usuario: {Username}", registerRequest.Username);
+                    return BadRequest("Failed to register user.");
+                }
+
+                _logger.LogInformation(" Usuario registrado exitosamente: {Username}", registerRequest.Username);
+                return Ok(new { Message = "User registered successfully." });
+            }
+            catch (Grpc.Core.RpcException ex)
+            {
+                _logger.LogError(ex, " Error gRPC al registrar usuario {Username}: {Detail}", registerRequest.Username, ex.Status.Detail);
+                return StatusCode(500, "Error interno de autenticación.");
+            }
         }
 
-        // Endpoint para hacer login
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest loginRequest)
         {
-            var response = await _authServiceClient.LoginAsync(loginRequest);
+            _logger.LogInformation("➡ Intentando login para: {Username}", loginRequest.Username);
 
-            if (response.Status != 200)
+            try
             {
-                return BadRequest(response.Error);
-            }
+                var response = await _authServiceClient.LoginAsync(loginRequest);
 
-            return Ok(new { Token = response.Token });
+                if (response.Status != 200)
+                {
+                    _logger.LogWarning("Login fallido para {Username}: {Error}", loginRequest.Username, response.Error);
+                    return BadRequest(response.Error);
+                }
+
+                _logger.LogInformation(" Login exitoso para {Username}", loginRequest.Username);
+                return Ok(new { Token = response.Token });
+            }
+            catch (Grpc.Core.RpcException ex)
+            {
+                _logger.LogError(ex, " Error gRPC al hacer login de {Username}: {Detail}", loginRequest.Username, ex.Status.Detail);
+                return StatusCode(500, "Error interno de autenticación.");
+            }
         }
     }
 }

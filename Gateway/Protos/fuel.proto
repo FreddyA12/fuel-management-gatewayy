@@ -5,6 +5,7 @@ option csharp_namespace = "FuelService.Grpc";
 service FuelConsumptionService {
   rpc Register (RegisterFuelConsumptionRequest) returns (RegisterFuelConsumptionResponse);
   rpc ListAll (Empty) returns (ListAllFuelConsumptionsResponse);
+  rpc FinalizeTrip (FinalizeTripRequest) returns (FinalizeTripResponse);
 }
 
 message Empty {}
@@ -13,8 +14,10 @@ message RegisterFuelConsumptionRequest {
   int32 vehicle_id = 1;
   int32 route_id = 2;
   int32 driver_id = 3;
-  string date = 4; // ISO 8601 format e.g., "2025-07-04T12:30:00"
+  string date = 4; 
   double actual_consumption = 5;
+  string state = 6; 
+  double estimated_consumption_per_km = 7; 
 }
 
 message RegisterFuelConsumptionResponse {
@@ -28,8 +31,49 @@ message FuelConsumptionItem {
   int32 driver_id = 4;
   string date = 5;
   double actual_consumption = 6;
+  string state = 7;
+  double estimated_consumption_per_km = 8; 
+
+  VehicleDto vehicle = 9;
+  DriverDto driver = 10;
+  RouteDto route = 11;
 }
 
 message ListAllFuelConsumptionsResponse {
   repeated FuelConsumptionItem consumptions = 1;
+}
+
+message VehicleDto {
+  int32 id = 1;
+  string plate_number = 2;
+  string machinery_type = 3;
+  bool is_operational = 4;
+  double fuel_capacity = 5;
+  string registered_at = 6; 
+  double fuel_consumption_by_km = 7;
+  string model = 8;
+}
+
+message DriverDto {
+  int32 id = 1;
+  string name = 2;
+  string identification_number = 3;
+  bool available = 4;
+  string machinery_type = 5;
+}
+
+message RouteDto {
+  int32 id = 1;
+  string name = 2;
+  string origin = 3;
+  string destiny = 4;
+  double distance_km = 5;
+  
+}
+message FinalizeTripRequest {
+  int32 id = 1;
+}
+
+message FinalizeTripResponse {
+  string status = 1;
 }

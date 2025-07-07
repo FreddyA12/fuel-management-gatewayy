@@ -1,11 +1,13 @@
-using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace VehicleService.Models
+namespace RouteService.Models
 {
-    public class Route
+    [Table("Routes")]
+    public class RouteEntity
     {
+        [Key]
+        [Column("id")]
         public int Id { get; set; }
 
         [Required]
@@ -21,7 +23,17 @@ namespace VehicleService.Models
         [Column("distance_km")]
         public double DistanceKm { get; set; }
 
-        [Column("est_consumption_per_km")]
-        public double EstimatedConsumptionPerKm { get; set; }
+
+        [Column("start_lat")]
+        public double StartLat { get; set; }
+
+        [Column("start_lng")]
+        public double StartLng { get; set; }
+
+        [Column("end_lat")]
+        public double EndLat { get; set; }
+
+        [Column("end_lng")]
+        public double EndLng { get; set; }
     }
 }

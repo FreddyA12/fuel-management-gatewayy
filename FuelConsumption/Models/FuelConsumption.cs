@@ -2,6 +2,9 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using VehicleService.Models;
+using DriverService.Models;
+using RouteService.Models;
+
 
 namespace FuelConsumption.Models
 {
@@ -31,9 +34,17 @@ namespace FuelConsumption.Models
         [Column("actual_consumption")]
         public double ActualConsumption { get; set; }
 
+        [Column("state")]
+        [StringLength(50)]
+        public string? State { get; set; }
+
+
+        [Column("est_consumption_per_km")]
+        public double EstimatedConsumptionPerKm { get; set; }
+
         // Relaciones (opcional si usas EF Navigation Properties)
         public Vehicle? Vehicle { get; set; }
-        public Route? Route { get; set; }
-        //public Driver? Driver { get; set; }
+        public RouteEntity? Route { get; set; }
+        public Driver? Driver { get; set; }
     }
 }
