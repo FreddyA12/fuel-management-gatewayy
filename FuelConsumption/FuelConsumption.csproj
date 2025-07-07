@@ -13,18 +13,19 @@
   </ItemGroup>
 
   <ItemGroup>
-	  <ProjectReference Include="..\VehicleService\VehicleService.csproj" />
-	  <ProjectReference Include="..\DriverService\DriverService.csproj" />
-	  <ProjectReference Include="..\RouteService\RouteService.csproj" />
-
-
-
+    <ProjectReference Include="..\VehicleService\VehicleService.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\DriverService\DriverService.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\RouteService\RouteService.csproj">
+      <PrivateAssets>all</PrivateAssets>
+    </ProjectReference>
   </ItemGroup>
 
-	<ItemGroup>
-		<Protobuf Include="Protos\fuel.proto" GrpcServices="Server" />
-		
-	</ItemGroup>
-
+  <ItemGroup>
+    <Protobuf Include="Protos\fuel.proto" GrpcServices="Server" />
+  </ItemGroup>
 
 </Project>
