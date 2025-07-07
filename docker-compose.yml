@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+
+  authservice:
+    build:
+      context: ./AuthService
+      dockerfile: Dockerfile
+    container_name: authservice
+    ports:
+      - "5123:5123"
+    environment:
+      - ASPNETCORE_URLS=http://+:5123
+
+  vehicleservice:
+    build:
+      context: ./VehicleService
+      dockerfile: Dockerfile
+    container_name: vehicleservice
+    ports:
+      - "5183:5183"
+    environment:
+      - ASPNETCORE_URLS=http://+:5183
+
+  routeservice:
+    build:
+      context: ./RouteService
+      dockerfile: Dockerfile
+    container_name: routeservice
+    ports:
+      - "5184:5184"
+    environment:
+      - ASPNETCORE_URLS=http://+:5184
+
+  fuelservice:
+    build:
+      context: ./FuelConsumption
+      dockerfile: Dockerfile
+    container_name: fuelservice
+    ports:
+      - "5185:5185"
+    environment:
+      - ASPNETCORE_URLS=http://+:5185
+
+  driverservice:
+    build:
+      context: ./DriverService
+      dockerfile: Dockerfile
+    container_name: driverservice
+    ports:
+      - "7158:7158"
+    environment:
+      - ASPNETCORE_URLS=http://+:7158
+
+  gateway:
+    build:
+      context: ./Gateway
+      dockerfile: Dockerfile
+    container_name: gateway
+    depends_on:
+      - authservice
+      - vehicleservice
+      - routeservice
+      - fuelservice
+      - driverservice
+    ports:
+      - "5000:80"    # HTTP Gateway
+      - "5001:443"   # HTTPS Gateway (si lo tienes configurado)
+    environment:
+      - ASPNETCORE_URLS=http://+:80;https://+:443
