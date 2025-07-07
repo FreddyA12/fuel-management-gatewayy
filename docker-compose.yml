@@ -34,8 +34,8 @@ services:
 
   fuelservice:
     build:
-      context: ./FuelConsumption
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./FuelConsumption/Dockerfile
     container_name: fuelservice
     ports:
       - "5185:5185"
