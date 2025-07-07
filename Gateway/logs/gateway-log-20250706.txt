@@ -2427,3 +2427,93 @@ System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport 
 2025-07-06 23:07:09.866 -05:00 [INF] Executed action FuelManagementGateway.Controllers.VehicleController.ListAll (Gateway) in 2136.6595ms
 2025-07-06 23:07:09.867 -05:00 [INF] Executed endpoint 'FuelManagementGateway.Controllers.VehicleController.ListAll (Gateway)'
 2025-07-06 23:07:09.868 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7171/api/Vehicle/all - 200 null application/json; charset=utf-8 2159.9219ms
+2025-07-06 23:56:10.971 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-07-06 23:56:11.102 -05:00 [DBG] Hosting starting
+2025-07-06 23:56:11.120 -05:00 [DBG] Middleware loaded
+2025-07-06 23:56:11.122 -05:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16499 B).
+2025-07-06 23:56:11.124 -05:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2025-07-06 23:56:11.221 -05:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2025-07-06 23:56:11.316 -05:00 [INF] Now listening on: https://localhost:7171
+2025-07-06 23:56:11.318 -05:00 [INF] Now listening on: http://localhost:5220
+2025-07-06 23:56:11.319 -05:00 [DBG] Loaded hosting startup assembly Gateway
+2025-07-06 23:56:11.320 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-07-06 23:56:11.321 -05:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-07-06 23:56:11.322 -05:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-07-06 23:56:11.430 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-07-06 23:56:11.431 -05:00 [INF] Hosting environment: Development
+2025-07-06 23:56:11.432 -05:00 [INF] Content root path: C:\Users\aliso\OneDrive - UNIVERSIDAD TÉCNICA DE AMBATO\Escritorio\FueManagement\fuel-management-gatewayy\Gateway
+2025-07-06 23:56:11.434 -05:00 [DBG] Hosting started
+2025-07-06 23:56:12.121 -05:00 [DBG] Connection id "0HNDT2AC7621U" received FIN.
+2025-07-06 23:56:12.128 -05:00 [DBG] Connection id "0HNDT2AC7621U" accepted.
+2025-07-06 23:56:12.129 -05:00 [DBG] Connection id "0HNDT2AC7621U" started.
+2025-07-06 23:56:12.142 -05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2025-07-06 23:56:12.164 -05:00 [DBG] Connection id "0HNDT2AC7621U" stopped.
+2025-07-06 23:56:12.170 -05:00 [DBG] Connection id "0HNDT2AC7621U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-07-06 23:56:12.747 -05:00 [DBG] Connection id "0HNDT2AC7621V" accepted.
+2025-07-06 23:56:12.753 -05:00 [DBG] Connection id "0HNDT2AC7621V" started.
+2025-07-06 23:56:12.862 -05:00 [DBG] Connection 0HNDT2AC7621V established using the following protocol: "Tls13"
+2025-07-06 23:56:12.912 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7171/swagger/index.html - null null
+2025-07-06 23:56:13.033 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-07-06 23:56:13.055 -05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2025-07-06 23:56:13.057 -05:00 [DBG] Request did not match any endpoints
+2025-07-06 23:56:13.122 -05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2025-07-06 23:56:13.123 -05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2025-07-06 23:56:13.139 -05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2025-07-06 23:56:13.140 -05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2025-07-06 23:56:13.144 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7171/swagger/index.html - 200 null text/html;charset=utf-8 233.2909ms
+2025-07-06 23:56:13.202 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - null null
+2025-07-06 23:56:13.208 -05:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2025-07-06 23:56:13.210 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7171/_framework/aspnetcore-browser-refresh.js - 200 16499 application/javascript; charset=utf-8 8.1183ms
+2025-07-06 23:56:13.609 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7171/_vs/browserLink - null null
+2025-07-06 23:56:13.738 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7171/_vs/browserLink - 200 null text/javascript; charset=UTF-8 128.4531ms
+2025-07-06 23:56:14.796 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - null null
+2025-07-06 23:56:14.798 -05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2025-07-06 23:56:14.799 -05:00 [DBG] Request did not match any endpoints
+2025-07-06 23:56:14.814 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7171/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 18.3787ms
+2025-07-06 23:56:21.137 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7171/api/FuelConsumption/all - null null
+2025-07-06 23:56:21.143 -05:00 [DBG] 1 candidate(s) found for the request path '/api/FuelConsumption/all'
+2025-07-06 23:56:21.147 -05:00 [DBG] Endpoint 'FuelManagementGateway.Controllers.FuelConsumptionController.ListAll (Gateway)' with route pattern 'api/FuelConsumption/all' is valid for the request path '/api/FuelConsumption/all'
+2025-07-06 23:56:21.149 -05:00 [DBG] Request matched endpoint 'FuelManagementGateway.Controllers.FuelConsumptionController.ListAll (Gateway)'
+2025-07-06 23:56:21.152 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-07-06 23:56:21.153 -05:00 [INF] Executing endpoint 'FuelManagementGateway.Controllers.FuelConsumptionController.ListAll (Gateway)'
+2025-07-06 23:56:21.170 -05:00 [INF] Route matched with {action = "ListAll", controller = "FuelConsumption"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ListAll() on controller FuelManagementGateway.Controllers.FuelConsumptionController (Gateway).
+2025-07-06 23:56:21.172 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-07-06 23:56:21.173 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-07-06 23:56:21.174 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-07-06 23:56:21.176 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-07-06 23:56:21.177 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-07-06 23:56:21.179 -05:00 [DBG] Executing controller factory for controller FuelManagementGateway.Controllers.FuelConsumptionController (Gateway)
+2025-07-06 23:56:21.214 -05:00 [DBG] Executed controller factory for controller FuelManagementGateway.Controllers.FuelConsumptionController (Gateway)
+2025-07-06 23:56:21.216 -05:00 [INF] Solicitando listado de todos los consumos.
+2025-07-06 23:56:21.229 -05:00 [DBG] Starting gRPC call. Method type: '"Unary"', URI: '"http://localhost:5185/FuelConsumptionService/ListAll"'.
+2025-07-06 23:56:21.240 -05:00 [DBG] Subchannel id '1-1' created with addresses: localhost:5185
+2025-07-06 23:56:21.243 -05:00 [DBG] Channel picker updated.
+2025-07-06 23:56:21.246 -05:00 [DBG] Subchannel id '1-1' state changed to "Connecting". Detail: 'Connection requested.'.
+2025-07-06 23:56:21.249 -05:00 [DBG] Channel state updated to "Connecting".
+2025-07-06 23:56:21.251 -05:00 [DBG] Picked queued.
+2025-07-06 23:56:21.252 -05:00 [DBG] Subchannel id '1-1' connecting to transport.
+2025-07-06 23:56:21.253 -05:00 [DBG] Subchannel id '1-1' state changed to "Ready". Detail: 'Passively connected.'.
+2025-07-06 23:56:21.254 -05:00 [DBG] Channel state updated to "Ready".
+2025-07-06 23:56:21.254 -05:00 [DBG] Channel picker updated.
+2025-07-06 23:56:21.258 -05:00 [DBG] Successfully picked subchannel id '1-1' with address localhost:5185. Transport status: "Passive"
+2025-07-06 23:56:21.262 -05:00 [INF] Start processing HTTP request POST http://localhost:5185/FuelConsumptionService/ListAll
+2025-07-06 23:56:21.266 -05:00 [INF] Sending HTTP request POST http://localhost:5185/FuelConsumptionService/ListAll
+2025-07-06 23:56:21.281 -05:00 [DBG] Sending message.
+2025-07-06 23:56:23.580 -05:00 [INF] Received HTTP response headers after 2310.8905ms - 200
+2025-07-06 23:56:23.581 -05:00 [INF] End processing HTTP request after 2319.7654ms - 200
+2025-07-06 23:56:23.587 -05:00 [DBG] Reading message.
+2025-07-06 23:56:23.603 -05:00 [DBG] Finished gRPC call.
+2025-07-06 23:56:23.604 -05:00 [INF] Listado de consumos obtenido correctamente. Total: 4
+2025-07-06 23:56:23.607 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-07-06 23:56:23.609 -05:00 [DBG] No information found on request to perform content negotiation.
+2025-07-06 23:56:23.609 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-07-06 23:56:23.610 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-07-06 23:56:23.611 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-07-06 23:56:23.612 -05:00 [INF] Executing OkObjectResult, writing value of type 'Google.Protobuf.Collections.RepeatedField`1[[FuelService.Grpc.FuelConsumptionItem, Gateway, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-07-06 23:56:23.626 -05:00 [INF] Executed action FuelManagementGateway.Controllers.FuelConsumptionController.ListAll (Gateway) in 2446.3747ms
+2025-07-06 23:56:23.628 -05:00 [INF] Executed endpoint 'FuelManagementGateway.Controllers.FuelConsumptionController.ListAll (Gateway)'
+2025-07-06 23:56:23.629 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7171/api/FuelConsumption/all - 200 null application/json; charset=utf-8 2491.0575ms

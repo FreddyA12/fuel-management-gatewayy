@@ -114,9 +114,13 @@ namespace FuelConsumption.Services
                         Name = r.Route.Name,
                         Origin = r.Route.Origin,
                         Destiny = r.Route.Destiny,
-                        DistanceKm = r.Route.DistanceKm
-                    
+                        DistanceKm = r.Route.DistanceKm,
+                        StartLat = r.Route.StartLat,
+                        StartLng = r.Route.StartLng,
+                        EndLat = r.Route.EndLat,
+                        EndLng = r.Route.EndLng
                     }
+
                 });
             }
 

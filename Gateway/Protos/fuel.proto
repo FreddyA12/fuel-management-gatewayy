@@ -68,8 +68,12 @@ message RouteDto {
   string origin = 3;
   string destiny = 4;
   double distance_km = 5;
-  
+  double start_lat = 6;
+  double start_lng = 7;
+  double end_lat = 8;
+  double end_lng = 9;
 }
+
 message FinalizeTripRequest {
   int32 id = 1;
 }
