@@ -34,8 +34,8 @@ services:
 
   fuelservice:
     build:
-      context: ./FuelConsumption
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: FuelConsumption/Dockerfile
     container_name: fuelservice
     ports:
       - "5185:5185"
@@ -48,3 +48,23 @@ services:
       dockerfile: Dockerfile
     container_name: driverservice
     ports:
+      - "7158:7158"
+    environment:
+      - ASPNETCORE_URLS=http://+:7158
+
+  gateway:
+    build:
+      context: ./Gateway
+      dockerfile: Dockerfile
+    container_name: gateway
+    depends_on:
+      - authservice
+      - vehicleservice
+      - routeservice
+      - fuelservice
+      - driverservice
+    ports:
+      - "5000:80"
+      - "5001:443"
+    environment:
+      - ASPNETCORE_URLS=http://+:80;https://+:443
